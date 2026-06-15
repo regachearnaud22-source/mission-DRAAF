@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Mission secrète</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 40px;
+}
+#image {
+    display: none;
+    max-width: 95%;
+}
+</style>
+</head>
+<body>
 
+<h2>Accès protégé</h2>
+<p>Entrez le mot de passe :</p>
+
+<input type="password" id="pwd">
+<button onclick="checkPassword()">Valider</button>
+
+<div>
+    <img id="image" src="JD1_BD_Final.png">
+</div>
+
+<script>
+function checkPassword() {
+    if (document.getElementById("pwd").value === "montpeyroux") {
+        document.getElementById("image").style.display = "block";
+    } else {
+        alert("Mot de passe incorrect");
+    }
+}
+</script>
+
+</body>
+</html>
